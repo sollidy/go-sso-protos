@@ -2,8 +2,12 @@ version: '3'
 
 tasks:
   generate:
+    aliases:
+      - gen
+    desc: 'Generate code from proto files'
     cmds:
       - buf generate
   lint:
+    desc: 'Lint proto files with buf'
     cmds:
       - buf lint
