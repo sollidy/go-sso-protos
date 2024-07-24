@@ -2,10 +2,12 @@ syntax = "proto3";
 
 package auth;
 
-service Auth {
-  rpc Register(RegisterRequest) returns RegisterResponse;
-  rpc Login(LoginRequest) returns LoginResponse;
-  rpc IsAdmin(IsAdminRequest) returns IsAdminResponse;
+option go_package = "sollidy.sso.v1;ssov1";
+
+service AuthService {
+  rpc Register(RegisterRequest) returns (RegisterResponse);
+  rpc Login(LoginRequest) returns (LoginResponse);
+  rpc IsAdmin(IsAdminRequest) returns (IsAdminResponse);
 }
 
 message RegisterRequest {
